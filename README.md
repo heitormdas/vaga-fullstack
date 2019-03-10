@@ -1,48 +1,24 @@
-# Teste de Fullstack
+﻿# pokemon---node
 
-Olá Dev!  Tudo bem?
-
-Nós estamos sempre em busca de profissionais interessantes e interessados, com boa capacidade de aprendizado, adaptação e principalmente bom senso!
-
-Este teste tem como objetivo avaliar e desafiar você. Não é obrigatório realizá-lo completamente, queremos apenas reconhecer seu esforço e potencial para aprender, se adaptar e tomar decisões.
-
-Vamos ao teste!
-
-## Desafio Pokémon
-
-Nós temos um problema, atualmente nosso sistema é só um excel, cheio de informações sobre Pokémon. Nós usamos ele como banco de dados e ao mesmo tempo interface de gerenciamento, inserindo, editando, deletando e filtrando os dados.
-
-Sua missão é criar um sistema para substituir este excel, pois queremos expandir e acrescentar features. Queremos manter essas funcionalidades básicas, mas principalmente queremos uma forma prática e agradável de buscar os dados, com listagem, filtros, paginação e detalhe sobre cada Pokémon.
-
-Fique à vontade com o layout, precisamos de uma interface que consiga entregar as funcionalidades principais e substituir o excel.
+Projeto tambem publicado no npm, para baixar use o comando "npm install heitor_moura".
+e não esqueça de copiar os arquivos para raiz, se baixou pelo npm, siga a partir do
+segundo passo (o segundo passo é feito só para garantir que a lib do knex esta instalada)
 
 
-## Consigo fazer?
 
-Consegue sim! Só precisa saber (ou aprender agora) um pouco sobre as seguintes tecnologias:
-- HTML
-- CSS 
-- Javascript
-- Alguma tecnologia backend, por exemplo, NodeJS, PHP, Java, etc...
-- Algum banco de dados, por exemplo, MySQL, SQL Server, MongoDB, etc...
-- Git
+para executar esse projeto, siga as instruções do arquivo README
 
+Antes de rodar o projeto, crie uma base de dados com o nome "pokemon" no mysql
 
-## Regras
+Para executar o projeto, rode os comandos a seguir no console na pasta do projeto;
 
-Para o desafio ficar mais interessante, decidimos criar umas regras básicas:
-- No layout, você utilizar algum framework CSS (ex: Bootstrap, MaterializeCSS, Bulma...)
-- Na parte de JS, deve utilizar algum framework (ex: VueJS, ReactJS, Angular...tente não usar jQuery)
-- Opcional: usar algum automatizador ou ferramenta de build (ex: Webpack, Grunt, Gulp...)
+npm install          \\ comando para instalar as dependencias do projeto
 
-## Por onde começo?
+npm install knex -g  \\ comando para instalar o knex de forma global
 
-Primeiramente, você pode fazer um fork desse repositório aqui, para sua conta do Github, depois disso crie uma branch nova com o seu nome (ex: nome_sobrenome), para podermos indentificá-lo.
+knex migrate:latest  \\ comando para criar as tabelas na base de dados. obs:ele ira procurar a                      
+                     \\ base no mysql na porta padrão (3306), caso deseje alterar, altere o                           
+                     \\ aquivo "knexfile.js"
 
-Após terminar o desafio, você pode solicitar um pull request para a branch master do nosso repositório. Vamos receber e fazer a avaliação de todos.
-
-## Só isso?
-
-Só! Mas se estiver motivado e quiser ser diferencial, tente preparar o projeto para ser executado de maneira prática, usando alguma ferramenta que facilite isso (ex: npm, yarn, docker, etc...). 
-
-Boa sorte! :)
+knex seed:run        \\ esse comando ira inserir 50 registros no banco. obs: as inserções estão   		     
+                     \\ no aqruivo "pokemon.js" na pasta "seeds"
